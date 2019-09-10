@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// to be seen only in production
 class ErrorBoundry extends Component {
   constructor(props) {
     super(props);
