@@ -10,8 +10,11 @@ import * as serviceWorker from "./serviceWorker";
 import { searchRobots, requestRobots } from "./redux/reducers";
 
 const logger = createLogger();
-const rootReducer = combineReducers({ searchRobots, requestRobots })
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
+const rootReducer = combineReducers({ searchRobots, requestRobots });
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunkMiddleware, logger)
+);
 
 ReactDOM.render(
   <Provider store={store}>
