@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Header from "./Header";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
 import Scroll from "./Scroll";
@@ -24,7 +25,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 class App extends Component {
-
   componentDidMount() {
     this.props.onRequestRobots();
   }
@@ -39,7 +39,7 @@ class App extends Component {
       <h1>Loading ...</h1>
     ) : (
       <div style={{ padding: "20px" }}>
-        <h1>Robo Friends App</h1>
+        <Header />
         <SearchBox onSearchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundry>
