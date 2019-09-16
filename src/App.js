@@ -4,7 +4,7 @@ import Header from "./Header";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
 import Scroll from "./Scroll";
-import ErrorBoundaries from "./ErrorBoundry";
+import ErrorBoundaries from "./ErrorBoundaries";
 import { setSearchField, requestRobots } from "./redux/actions";
 // import { robots } from "./robots";
 
@@ -24,6 +24,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+// State component
 class App extends Component {
   componentDidMount() {
     this.props.onRequestRobots();

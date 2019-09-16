@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // to be seen only in production
-class ErrorBoundry extends Component {
+class ErrorBoundaries extends Component {
   constructor(props) {
     super(props);
 
@@ -16,11 +16,11 @@ class ErrorBoundry extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <h1> Upps! Something happened.</h1>;
+      return <h1> Ups! Something happened.</h1>;
     }
 
     return this.props.children;
   }
 }
 
-export default ErrorBoundry;
+export default ErrorBoundaries;
